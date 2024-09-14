@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+h2 {
+  color: #282c34;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar general styles */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #333;
+  padding: 15px;
   color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.nav-links a:hover{
+  cursor: pointer;
+  background: #d5ec04;
+  border: 1px solid #d5ec04;
+  border-radius: 5%;
+
+}
+
+.nav-links.open {
+  display: block;
+}
+
+.nav-icon {
+  display: none;
+  cursor: pointer;
+  color: white;  /* Ensure icon is visible */
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; /* Full width */
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-icon {
+    display: block;  /* Show the icon on small screens */
+    font-size: 24px;
   }
 }
