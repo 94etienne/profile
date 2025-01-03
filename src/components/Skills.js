@@ -17,6 +17,10 @@ const SkillsItem = ({ skillCategory, skills }) => (
 const Skills = () => {
   const skillsData = [
     {
+      skillCategory: "Artificial Intelligence",
+      skills: "Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Time Series Analysis",
+    },
+    {
       skillCategory: "Programming and Markup Languages",
       skills: "Python, C/C++, Java, Android, React, Node, PHP, HTML",
     },
