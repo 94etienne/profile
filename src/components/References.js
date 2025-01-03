@@ -1,17 +1,59 @@
-import React from 'react';
+import React from "react";
+import { Container, Typography, Card, CardContent, Divider, Link } from "@mui/material";
+
+const RefereeItem = ({ name, position, email }) => (
+  <Card sx={{ marginBottom: 2, boxShadow: 3 }}>
+    <CardContent>
+      <Typography variant="body1" paragraph>
+        <strong>{name}</strong> - {position},{" "}
+        <Link href={`mailto:${email}`} color="primary">
+          {email}
+        </Link>
+      </Typography>
+    </CardContent>
+  </Card>
+);
 
 const Referees = () => {
+  const referees = [
+    // {
+    //   name: "Assoc Prof. Adams Wai Kin Kong",
+    //   position: "Nanyang Technological University",
+    //   email: "adamskong@ntu.edu.sg"
+    // },
+    {
+      name: "Dr. Alfred UWITONZE",
+      position: "Dean of School of ICT at the University of Rwanda",
+      email: "alfruwitonze@gmail.com"
+    },
+    {
+      name: "Mr. Andre UZAMURENGERA",
+      position: "Data Scientist at Centre Bank of Rwanda",
+      email: "uzandre12@gmail.com"
+    },
+    {
+      name: "NGABO Desire",
+      position: "Head of Laboratories in the African Center of Excellence in the Internet of things (ACEIoT)/University of Rwanda, Lecturer at the University of Rwanda",
+      email: "dngabo@gmail.com"
+    },
+    // Add other referees similarly
+  ];
+
   return (
-    <section style={{ padding: '20px', backgroundColor: '#8c564b' }}>
-      <h2>Referees</h2>
-      <ul>
-        <li>Assoc Prof. Adams Wai Kin Kong - Nanyang Technological University, <a className='text-white' href="mailto:adamskong@ntu.edu.sg">adamskong@ntu.edu.sg</a></li>
-        <li>Dr. Alfred UWITONZE - Dean of School of ICT at the University of Rwanda, <a className='text-white' href="mailto:alfruwitonze@gmail.com">alfruwitonze@gmail.com</a></li>
-        <li>Mr. Andre UZAMURENGERA - Data Scientist at Centre Bank of Rwanda, <a className='text-white' href="uzandre12@gmail.com">uzandre12@gmail.com</a></li>
-        <li>NGABO Desire - Head of Laboratories in the African Center of Excellence in the Internet of things (ACEIoT)/University of Rwanda, Lecturer at the University of Rwanda, <a className='text-white' href="dngabo@gmail.com">dngabo@gmail.com</a></li>
-        {/* Add other referees similarly */}
-      </ul>
-    </section>
+    <Container sx={{ padding: "20px", backgroundColor: "#f4f4f9" }}>
+      <Typography variant="h3" component="h1" color="primary" gutterBottom>
+        Referees
+      </Typography>
+      <Divider sx={{ marginBottom: 4 }} />
+      {referees.map((referee, index) => (
+        <RefereeItem
+          key={index}
+          name={referee.name}
+          position={referee.position}
+          email={referee.email}
+        />
+      ))}
+    </Container>
   );
 };
 
