@@ -38,7 +38,7 @@ const Education = () => {
     },
     {
       degree: "A2 in Computer Science",
-      institution: "Lycee Du Lac Muhazi (AsPEJE-KABARE)",
+      institution: "Lycee Du Lac Muhazi (ASPEJ-KABARE)",
       duration: "2013-2015",
       grade: "Grade: 39",
     },
