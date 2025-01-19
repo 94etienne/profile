@@ -14,20 +14,39 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false); // Close navbar after click on mobile
+    setIsOpen(false); // Close navbar after clicking a link on mobile
   };
+
+  const navItems = [
+    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'certificates', label: 'Certificates' },
+    { id: 'referees', label: 'Referees' },
+    { id: 'office', label: 'Office' },
+    { id: 'contact', label: 'Contact' },
+  ];
 
   return (
     <nav className="navbar">
       <div className="nav-logo">NTAMBARA Etienne</div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <a onClick={() => scrollToSection('education')}>Education</a>
-        <a onClick={() => scrollToSection('experience')}>Experience</a>
-        <a onClick={() => scrollToSection('projects')}>Projects</a>
-        <a onClick={() => scrollToSection('skills')}>Skills</a>
-        <a onClick={() => scrollToSection('certificates')}>Certificates</a>
-        <a onClick={() => scrollToSection('referees')}>Referees</a>
-        <a onClick={() => scrollToSection('contact')}>Contact</a>
+        {navItems.map((item) => (
+          <div
+            key={item.id}
+            className="nav-link"
+            role="button"
+            tabIndex={0}
+            onClick={() => scrollToSection(item.id)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') scrollToSection(item.id);
+            }}
+            style={{ cursor: 'pointer' }}
+          >
+            {item.label}
+          </div>
+        ))}
       </div>
       <div className="nav-icon" onClick={handleToggle}>
         <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>

@@ -29,6 +29,7 @@ import Referees from './components/References';
 import Projects from './components/Projects';
 import './App.css';  // For background color
 import Footer from './components/Footer';
+import Office from './components/Office';
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
       </section>
       <section id="referees">
         <Referees />
+      </section>
+      <section id="office">
+        <Office />
       </section>
       <section id="contact">
         <Contact />

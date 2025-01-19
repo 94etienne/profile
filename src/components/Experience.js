@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Typography, Card, CardContent, CardActions, Button, List, ListItem, ListItemText, Divider } from "@mui/material";
+import { Container, Typography, Card, CardContent, Divider } from "@mui/material";
 
 const ExperienceItem = ({ title, role, description, link }) => (
   <Card sx={{ marginBottom: 4, boxShadow: 3 }}>
@@ -27,7 +27,7 @@ const Experience = () => {
       title: "African Center of Excellence in Internet of Things (ACEIoT)",
       role: "Volunteer",
       description:
-        "Currently developing a system that will control lab accessories from renting to returning, using React.js, Node.js, and MYSQL.",
+        "Developed a system that will control lab accessories from renting to returning, using React.js, Node.js, and MYSQL.",
       link: "https://www.youtube.com/watch?v=liFgo2LXeu0",
     },
     {
@@ -59,21 +59,21 @@ const Experience = () => {
     {
       title: "Computer Innovation Technology Ltd",
       role: "Trainer",
-      description: "Trainer of RWANDA TVET BOARD students in system development courses.",
+      description: "Trainer of RWANDA TVET BOARD students in software development modules.",
       link: "https://citttech.com/",
     },
-    {
-      title: "IREMBO",
-      role: "Irembo Agent",
-      description: "Delivering Irembo services to the Rwandan population.",
-      link: null,
-    },
-    {
-      title: "MobiCash",
-      role: "MobiCash Agent",
-      description: "Delivering MobiCash services to the Rwandan population by assisting with service payments.",
-      link: null,
-    },
+    // {
+    //   title: "IREMBO",
+    //   role: "Irembo Agent",
+    //   description: "Delivering Irembo services to the Rwandan population.",
+    //   link: null,
+    // },
+    // {
+    //   title: "MobiCash",
+    //   role: "MobiCash Agent",
+    //   description: "Delivering MobiCash services to the Rwandan population by assisting with service payments.",
+    //   link: null,
+    // },
   ];
 
   return (

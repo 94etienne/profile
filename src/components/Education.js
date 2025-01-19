@@ -15,7 +15,7 @@ const EducationItem = ({ degree, institution, duration, grade }) => (
       </Typography>
       {grade && (
         <Typography variant="body1" paragraph>
-          <strong>Grade:</strong> {grade}
+          {/* <strong>Grade:</strong> {grade} */}
         </Typography>
       )}
     </CardContent>
@@ -26,7 +26,7 @@ const Education = () => {
   const educationData = [
     {
       degree: "Master of Science in Artificial Intelligence",
-      institution: "Nanyang Technological University (NTU-SINGAPORE)",
+      institution: "Nanyang Technological University, Singapore (NTU-SINGAPORE)",
       duration: "2023-2024",
       grade: "CGPA: 3.5",
     },
@@ -38,7 +38,7 @@ const Education = () => {
     },
     {
       degree: "A2 in Computer Science",
-      institution: "Lycee Du Lac Muhazi (AsPEJE-KABARE)",
+      institution: "Lycee Du Lac Muhazi (As.P.E.J-KABARE)",
       duration: "2013-2015",
       grade: "Grade: 39",
     },
